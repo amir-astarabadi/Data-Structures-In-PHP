@@ -1,4 +1,4 @@
-## A stack is a ```linear``` data structure that follows ```First in First out``` principle.
+## A stack is a ```linear``` data structure that follows ```First in Last out``` principle.
 
 ## Methods:
 * ### push : add element
