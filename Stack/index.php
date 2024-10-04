@@ -1,7 +1,7 @@
 <?php
 
 
-require __DIR__ . "/stack.php";
+require __DIR__ . "/Stack.php";
 
 
 echo "Enter size of stack: ";
