@@ -21,11 +21,10 @@ class Queue
     public function enqueue($element)
     {
         if ($this->isFull()) {
-            echo "Queue is Full." . PHP_EOL;
-            return;
+            return "Queue is Full." . PHP_EOL;
         }
 
-        if ($this->front == -1) {
+        if ($this->isEmpty()) {
             $this->front += 1;
         }
 
@@ -39,8 +38,7 @@ class Queue
     public function dequeue(): mixed
     {
         if ($this->isEmpty()) {
-            echo "Queue is Empty." . PHP_EOL;
-            return null;
+            return "Queue is Empty." . PHP_EOL;
         }
 
         $returnValue = $this->queue[$this->front];
@@ -59,12 +57,12 @@ class Queue
 
     public function isEmpty(): bool
     {
-        return $this->count == 0;
+        return $this->count <= 0;
     }
 
     public function isFull(): bool
     {
-        return  $this->count == $this->size;
+        return  $this->count >= $this->size;
     }
 
     public function peek(): mixed
@@ -79,8 +77,7 @@ class Queue
     public function __toString(): string
     {
         if ($this->isEmpty()) {
-            echo "Queue is Empty." . PHP_EOL;
-            return '';
+            return "Queue is Empty." . PHP_EOL;
         }
 
         $front = $this->front;
