@@ -4,3 +4,5 @@
 
 * Stack
 * Queue
+* LinkedList
+* DoublyLinkedList
